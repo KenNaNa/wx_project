@@ -1,0 +1,26 @@
+<import src="list-template/list-template.wxml" />
+<import src="movie-more/movie-grid-template/movie-grid-template.wxml"/>
+<!-- <text>{{inTheathers}}</text>
+<text>{{comingSoon}}</text>
+<text>{{top250}}</text> -->
+<view class='search'>
+  <icon color='#109d59' type='search' size='30' class='icon-img' bindtap='onSearch'></icon>
+  <input type='text' placeholder='长城' placeholder-class='placeholder' bindfocus='onBindFocus' bindblur='onBindBlur' value="{{value}}"></input>
+  <icon color="#109d59" type='clear' size="30" class='xx-img' bindtap='onCancelImgTap' wx:if="{{searchPanelShow}}"></icon>
+</view>
+<view class="container" wx:if="{{containerShow}}">
+    <view class="movies-template">
+        <template is="movielistTemplate" data="{{...inTheathers}}"/>
+    </view>
+    <view class="movies-template">
+        <template is="movielistTemplate" data="{{...comingSoon}}"/>
+    </view>
+    <view class="movies-template">
+        <template is="movielistTemplate" data="{{...top250}}"/>
+    </view>
+</view>
+
+
+<view class='search-panel' wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchData}}"></template>
+</view>

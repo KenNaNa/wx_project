@@ -1,0 +1,22 @@
+<view class="detail-container">
+  <image class="head-img" src="{{articleImg}}"></image>
+  <view class="author-data">
+    <image class="author-avatar" src="{{authorIcon}}"></image>
+    <text class="author-name">{{author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="time">{{time}}</text>
+    <image data-newsId="{{newsId}}" bindtap='playMusic' class='playmusic' src="{{isPlay ? '../../images/earphone.png' : '../../images/eartag.png'}}"></image>
+  </view>
+  <text class="title">{{title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <!--第一张图片显示不收藏的效果  -->
+      <image wx:if="{{selected}}" catchtap="onCollected" src="../../images/sch.png"></image>
+      <!--第二章图片显示收藏的效果  -->
+      <image wx:else catchtap="onCollected" src="../../images/sc.png"></image>
+      <image catchtap="shareTap" class="share-img" src="../../images/fx.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{detail}}</text>
+</view>

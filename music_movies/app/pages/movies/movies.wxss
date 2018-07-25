@@ -1,0 +1,35 @@
+@import "list-template/list-template.wxss";
+@import "movie-more/movie-grid-template/movie-grid-template.wxss";
+
+.container{
+    background-color: #f1f1f1;
+}
+
+.movies-template{
+    margin-bottom: 30rpx;
+}
+.search{
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+icon.xx-img{
+  float: right;
+  margin-top:3px;
+}
+.icon-img{
+  margin-top: 3px;
+  float: left;
+}
+input{
+  height: 80rpx;
+  width: 85%;
+  line-height: 80rpx;
+  text-indent: 30rpx;
+}
+.search-panel{
+  width: 100%;
+}
